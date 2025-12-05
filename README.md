@@ -88,10 +88,19 @@ The actual engine source code is proprietary and hosted in a private repository.
 
 The commands below describe how installation looks for customers or collaborators with access to the private engine repo.
 
-Bash
+## 📦 Installation (for licensed product)
 
-# Clone the private engine repository (if you have access)
-git clone [https://github.com/](https://github.com/)<Zunbreak>/ShieldShift.git
+
+🔒 Clone the private engine repository below (requires access/license)
+```
+https://github.com/Zunbreak/ShieldShift.git
+```
+
+### Installation
+...
+cd ShieldShift
+
+# ... rest of installation steps
 cd ShieldShift
 
 # Create virtual environment
