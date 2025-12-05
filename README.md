@@ -1,6 +1,8 @@
 # ShieldShift: Vendor-Agnostic Firewall Migration Engine
 
-> **Migrate complex network security policies in seconds, not days.** > A CLI & API tool for converting, auditing, and validating firewall configurations between Cisco ASA, FortiGate, and Palo Alto.
+> **Migrate complex network security policies in seconds, not days.** 
+>
+> **A CLI & API tool for converting, auditing, and validating firewall configurations between Cisco ASA, FortiGate, and Palo Alto.**
 
 
 
