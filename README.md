@@ -86,7 +86,8 @@ shieldshift diff policy_old.json policy_new.json
 
 The actual engine source code is proprietary and hosted in a private repository.
 
-The commands below describe how installation looks for customers or collaborators with access to the private engine repo.
+The commands below describe how installation looks for customers or collaborators,
+with access to the private engine repo.
 
 ## 📦 Installation (for licensed product)
 
