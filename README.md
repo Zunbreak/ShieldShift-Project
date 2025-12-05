@@ -81,6 +81,8 @@ shieldshift anonymize policy.json --out policy_anon.json
 
 # Compare two policies
 shieldshift diff policy_old.json policy_new.json
+
+
 📦 Installation (for licensed product)
 ⚠️ Important: > This repository (ShieldShift-Project) contains documentation, examples and architecture.
 
@@ -95,8 +97,8 @@ with access to the private engine repo.
 🔒 Clone the private engine repository below (requires access/license)
 ```
 https://github.com/Zunbreak/ShieldShift.git
-```
 
+```
 ### Installation
 ...
 cd ShieldShift
