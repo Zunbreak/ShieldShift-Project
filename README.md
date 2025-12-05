@@ -84,7 +84,7 @@ shieldshift diff policy_old.json policy_new.json
 
 
 📦 Installation (for licensed product)
-⚠️ Important: > This repository (ShieldShift-Project) contains documentation, examples and architecture.
+⚠️ Important: This repository (ShieldShift-Project) contains documentation, examples and architecture.
 
 The actual engine source code is proprietary and hosted in a private repository.
 
