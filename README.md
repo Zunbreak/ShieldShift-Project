@@ -89,7 +89,7 @@ The commands below describe how installation looks for customers or collaborator
 Bash
 
 # Clone the private engine repository (if you have access)
-git clone [https://github.com/](https://github.com/)<YOUR_GITHUB_USERNAME>/ShieldShift.git
+git clone [https://github.com/](https://github.com/)<Zunbreak>/ShieldShift.git
 cd ShieldShift
 
 # Create virtual environment
