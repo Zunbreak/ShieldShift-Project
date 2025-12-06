@@ -22,8 +22,11 @@
 * ✅ **Precision:** Intermediate Representation (IR) keeps semantics intact between vendors
 * ✅ **Security:** Built-in risk analysis and policy auditing
 
-🛠 Tech: Python, Typer, FastAPI, IR design, network security tooling
+
 ---
+
+🛠 Tech: Python, Typer, FastAPI, IR design, network security tooling
+
 
 ## 🚀 Key Features
 
