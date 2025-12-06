@@ -146,6 +146,7 @@ Planned / in progress:
 
 🔄 CI/CD integration examples (GitHub Actions)
 
+
 📄 Ownership & Licensing
 ShieldShift is a proprietary software product.
 
@@ -157,12 +158,14 @@ All rights to the ShieldShift engine are reserved. Third-party open source depen
 
 For commercial licensing, enterprise integration, or job inquiries, please contact me directly.
 
-👤 Contact
-Author: Zebastian Larsson (@Zunbreak)
 
-📧 Business / licensing: [ShielfShift](shieldshift.business@gmail.com)
+👤 Contact
+
+📧 Business / licensing: [shieldshift.business@gmail.com](mailto:shieldshift.business@gmail.com)
 
 💼 LinkedIn: [Zebastian Larsson](https://www.linkedin.com/in/zebastian-larsson-b334861b2/)
 
-🛠 Tech: Python, Typer, FastAPI, IR design, network security tooling
+Author: Zebastian Larsson [Zunbreak](https://github.com/Zunbreak)
+
+
 ```
