@@ -99,21 +99,18 @@ with access to the private engine repo.
 https://github.com/Zunbreak/ShieldShift.git
 
 ```
+```
 ### Installation
-...
 cd ShieldShift
 
-# ... rest of installation steps
-cd ShieldShift
-
-# Create virtual environment
+# Rest of installation steps create virtual environment
 python -m venv .venv
 
 # Linux/macOS:
 source .venv/bin/activate
 
 # Windows:
-# .venv\Scripts\activate
+.venv\Scripts\activate
 
 # Install in editable mode
 pip install -e .
@@ -163,8 +160,9 @@ For commercial licensing, enterprise integration, or job inquiries, please conta
 👤 Contact
 Author: Zebastian Larsson (@Zunbreak)
 
-📧 Business / licensing: [add email or preferred contact]
+📧 Business / licensing: [ShielfShift](shieldshift.business@gmail.com)
 
-💼 LinkedIn: [link here]
+💼 LinkedIn: [Zebastian Larsson](https://www.linkedin.com/in/zebastian-larsson-b334861b2/)
 
 🛠 Tech: Python, Typer, FastAPI, IR design, network security tooling
+```
