@@ -1,10 +1,8 @@
 # ShieldShift: Vendor-Agnostic Firewall Migration Engine
 
-> **Migrate complex network security policies in seconds, not days.** 
->
+> **Migrate complex network security policies in seconds, not days.**
+> 
 > **A CLI & API tool for converting, auditing, and validating firewall configurations between Cisco ASA, FortiGate, and Palo Alto.**
-
-
 
 ---
 
@@ -22,54 +20,47 @@
 * ✅ **Precision:** Intermediate Representation (IR) keeps semantics intact between vendors
 * ✅ **Security:** Built-in risk analysis and policy auditing
 
->
-#
-
-* 🛠 Tech: Python, Typer, FastAPI, IR design, network security tooling
+🛠 **Tech:** Python, Typer, FastAPI, IR design, network security tooling
 
 ---
-
-
-
-
 
 ## 🚀 Key Features
 
 ### 1. True Vendor Independence (IR Engine)
-Unlike simple regex scripts, ShieldShift parses configs into a standardized JSON Intermediate Representation.
 
-- **Input:** Cisco ASA, FortiGate, Palo Alto
-- **Output:** Any of the above + JSON (for custom tooling)
-- **Benefit:** Add a new vendor parser once, and it automatically unlocks conversions to all other supported vendors.
+Unlike simple regex scripts, **ShieldShift** parses configs into a standardized **JSON Intermediate Representation**.
+
+* **Input:** Cisco ASA, FortiGate, Palo Alto
+* **Output:** Any of the above + JSON (for custom tooling)
+* **Benefit:** Add a new vendor parser once, and it automatically unlocks conversions to all other supported vendors.
 
 ### 2. Built-in Security Audit & Risk Analysis
+
 Don't just migrate garbage. Clean it up on the way.
 
-- **Detects:**
-  - ANY-ANY-ALLOW style rules
-  - Dangerous open ports to private (RFC1918) networks
-  - Overly large networks in allow rules
-  - Shadowed rules
-  - Unused objects
-- **Planned extensions (Pro):** Custom compliance profiles
+* **Detects:**
+  * ANY-ANY-ALLOW style rules
+  * Dangerous open ports to private (RFC1918) networks
+  * Overly large networks in allow rules
+  * Shadowed rules
+  * Unused objects
+* **Planned extensions (Pro):** Custom compliance profiles
 
 ### 3. Enterprise-Grade Quality & Validation
+
 Every conversion is validated to ensure your security policies remain intact.
 
-- **150+ Automated Tests:** Full coverage of importers, exporters, and cross-vendor conversions
-- **Golden Roundtrip Tests:** Verified semantic preservation across all vendor combinations (ASA ↔ FortiGate ↔ Palo Alto)
-- **Built-in Validation:** Policy structure validation and consistency checks
-
+* **150+ Automated Tests:** Full coverage of importers, exporters, and cross-vendor conversions
+* **Golden Roundtrip Tests:** Verified semantic preservation across all vendor combinations (ASA ↔ FortiGate ↔ Palo Alto)
+* **Built-in Validation:** Policy structure validation and consistency checks
 
 ---
 
 ## 🔒 Security & Privacy
 
-- 🏠 **100% On-Prem:** All parsing, analysis and conversion is done locally. No config data ever leaves your environment.
-- 🧼 **Anonymization-first:** Built-in anonymizer makes it safe to share configs externally. (support, vendors, audits) without leaking sensitive infrastructure details.
-
-- 🧾 **Designed like a firewall:** Decisions are logged, policies are explicit, and defaults are conservative.
-
+* 🏠 **100% On-Prem:** All parsing, analysis and conversion is done locally. No config data ever leaves your environment.
+* 🧼 **Anonymization-first:** Built-in anonymizer makes it safe to share configs externally (support, vendors, audits) without leaking sensitive infrastructure details.
+* 🧾 **Designed like a firewall:** Decisions are logged, policies are explicit, and defaults are conservative.
 
 ---
 
@@ -77,7 +68,7 @@ Every conversion is validated to ensure your security policies remain intact.
 
 > Note: Command names and flags follow the internal engine; exact syntax may evolve.
 
-
+```bash
 # Convert Cisco ASA config to FortiGate format
 shieldshift convert --from cisco_asa --to fortigate ./legacy_fw.cfg --output ./new_fw.conf
 
@@ -98,30 +89,28 @@ shieldshift anonymize policy.json --out policy_anon.json
 
 # Compare two policies
 shieldshift diff policy_old.json policy_new.json
+```
 
 ---
 
 ## 📦 Installation (for licensed product)
-⚠️ Important: This repository (ShieldShift-Project) contains documentation, examples and architecture.
+
+⚠️ **Important:** This repository (ShieldShift-Project) contains documentation, examples and architecture.
 
 The actual engine source code is proprietary and hosted in a private repository.
 
-The commands below describe how installation looks for customers or collaborators,
-with access to the private engine repo.
+The commands below describe how installation looks for customers or collaborators, with access to the private engine repo.
 
+### Clone the private engine repository (requires access/license)
 
-
-
-🔒 Clone the private engine repository below (requires access/license)
-
-https://github.com/Zunbreak/ShieldShift.git
+🔒 [https://github.com/Zunbreak/ShieldShift.git](https://github.com/Zunbreak/ShieldShift.git)
 
 
 
 ### Installation
-cd ShieldShift
 
-# Rest of installation steps create virtual environment
+```bash
+# Create virtual environment
 python -m venv .venv
 
 # Linux/macOS:
@@ -132,24 +121,29 @@ source .venv/bin/activate
 
 # Install in editable mode
 pip install -e .
-Once installed, the shieldshift CLI is available on your PATH:
+```
 
+Once installed, the `shieldshift` CLI is available on your PATH:
+
+```bash
 shieldshift --help
+```
 
 ---
 
 ## 🛣️ Roadmap (High-Level)
-✅ Core IR models + CLI
 
-✅ Cisco ASA importer/exporter
+✅ **Core IR models + CLI**
 
-✅ FortiGate & Palo Alto support (import/export via IR)
+✅ **Cisco ASA importer/exporter**
 
-✅ Validation, diff, stats, risk analysis
+✅ **FortiGate & Palo Alto support** (import/export via IR)
 
-✅ Anonymization (CLI + API)
+✅ **Validation, diff, stats, risk analysis**
 
-Planned / in progress:
+✅ **Anonymization** (CLI + API)
+
+**Planned / in progress:**
 
 🔄 Enhanced reporting & risk dashboards (Pro features)
 
@@ -159,8 +153,10 @@ Planned / in progress:
 
 🔄 CI/CD integration examples (GitHub Actions)
 
+---
 
-📄 Ownership & Licensing
+## 📄 Ownership & Licensing
+
 ShieldShift is a proprietary software product.
 
 This repository (ShieldShift-Project) is the public documentation and example showcase for the engine.
@@ -171,14 +167,13 @@ All rights to the ShieldShift engine are reserved. Third-party open source depen
 
 For commercial licensing, enterprise integration, or job inquiries, please contact me directly.
 
+---
 
-👤 Contact
+## 👤 Contact
 
-📧 Business / licensing: [shieldshift.business@gmail.com](mailto:shieldshift.business@gmail.com)
+📧 **Business / licensing:** [shieldshift.business@gmail.com](mailto:shieldshift.business@gmail.com)
 
-💼 LinkedIn: [Zebastian Larsson](https://www.linkedin.com/in/zebastian-larsson-b334861b2/)
+💼 **LinkedIn:** [Zebastian Larsson](https://www.linkedin.com/in/zebastian-larsson-b334861b2/)
 
-Author: Zebastian Larsson [Zunbreak](https://github.com/Zunbreak)
+**Author:** Zebastian Larsson [@Zunbreak](https://github.com/Zunbreak)
 
-
-```
