@@ -22,41 +22,54 @@
 * ✅ **Precision:** Intermediate Representation (IR) keeps semantics intact between vendors
 * ✅ **Security:** Built-in risk analysis and policy auditing
 
+>
+#
+
+* 🛠 Tech: Python, Typer, FastAPI, IR design, network security tooling
 
 ---
 
-🛠 Tech: Python, Typer, FastAPI, IR design, network security tooling
+
+
 
 
 ## 🚀 Key Features
 
 ### 1. True Vendor Independence (IR Engine)
+Unlike simple regex scripts, ShieldShift parses configs into a standardized JSON Intermediate Representation.
 
-Unlike simple regex scripts, **ShieldShift** parses configs into a standardized **JSON Intermediate Representation**.
-
-* **Input:** Cisco ASA, FortiGate, Palo Alto
-* **Output:** Any of the above + JSON (for custom tooling)
-* **Benefit:** Add a new vendor parser once, and it automatically unlocks conversions to all other supported vendors.
-
----
+- **Input:** Cisco ASA, FortiGate, Palo Alto
+- **Output:** Any of the above + JSON (for custom tooling)
+- **Benefit:** Add a new vendor parser once, and it automatically unlocks conversions to all other supported vendors.
 
 ### 2. Built-in Security Audit & Risk Analysis
+Don't just migrate garbage. Clean it up on the way.
 
-Don’t just migrate garbage. Clean it up on the way.
+- **Detects:**
+  - ANY-ANY-ALLOW style rules
+  - Dangerous open ports to private (RFC1918) networks
+  - Overly large networks in allow rules
+  - Shadowed rules
+  - Unused objects
+- **Planned extensions (Pro):** Custom compliance profiles
 
-* **Detects:** * ANY-ANY-ALLOW style rules
-    * Dangerous open ports to private (RFC1918) networks
-    * Overly large networks in allow rules
-* **Planned extensions (Pro):** * Shadowed rules
-    * Unused objects
-    * Custom compliance profiles
+### 3. Enterprise-Grade Quality & Validation
+Every conversion is validated to ensure your security policies remain intact.
+
+- **150+ Automated Tests:** Full coverage of importers, exporters, and cross-vendor conversions
+- **Golden Roundtrip Tests:** Verified semantic preservation across all vendor combinations (ASA ↔ FortiGate ↔ Palo Alto)
+- **Built-in Validation:** Policy structure validation and consistency checks
+
 
 ---
 
-### 3. Data Sovereignty & Anonymization
+## 🔒 Security & Privacy
 
-* **On-Prem execution:** No config data ever leaves your environment.
-* **Anonymizer:** Strip sensitive IPs/names so you can safely share configs for troubleshooting, audits, or vendor support.
+- 🏠 **100% On-Prem:** All parsing, analysis and conversion is done locally. No config data ever leaves your environment.
+- 🧼 **Anonymization-first:** Built-in anonymizer makes it safe to share configs externally. (support, vendors, audits) without leaking sensitive infrastructure details.
+
+- 🧾 **Designed like a firewall:** Decisions are logged, policies are explicit, and defaults are conservative.
+
 
 ---
 
@@ -64,7 +77,7 @@ Don’t just migrate garbage. Clean it up on the way.
 
 > Note: Command names and flags follow the internal engine; exact syntax may evolve.
 
-```bash
+
 # Convert Cisco ASA config to FortiGate format
 shieldshift convert --from cisco_asa --to fortigate ./legacy_fw.cfg --output ./new_fw.conf
 
@@ -86,8 +99,9 @@ shieldshift anonymize policy.json --out policy_anon.json
 # Compare two policies
 shieldshift diff policy_old.json policy_new.json
 
+---
 
-📦 Installation (for licensed product)
+## 📦 Installation (for licensed product)
 ⚠️ Important: This repository (ShieldShift-Project) contains documentation, examples and architecture.
 
 The actual engine source code is proprietary and hosted in a private repository.
@@ -95,15 +109,15 @@ The actual engine source code is proprietary and hosted in a private repository.
 The commands below describe how installation looks for customers or collaborators,
 with access to the private engine repo.
 
-## 📦 Installation (for licensed product)
+
 
 
 🔒 Clone the private engine repository below (requires access/license)
-```
+
 https://github.com/Zunbreak/ShieldShift.git
 
-```
-```
+
+
 ### Installation
 cd ShieldShift
 
@@ -122,14 +136,9 @@ Once installed, the shieldshift CLI is available on your PATH:
 
 shieldshift --help
 
-🔒 Security & Privacy
-🏠 100% On-Prem: All parsing, analysis and conversion is done locally.
+---
 
-🧼 Anonymization-first: Built-in anonymizer makes it safe to share configs externally (support, vendors, audits) without leaking sensitive infrastructure details.
-
-🧾 Designed like a firewall: Decisions are logged, policies are explicit, and defaults are conservative.
-
-🛣️ Roadmap (High-Level)
+## 🛣️ Roadmap (High-Level)
 ✅ Core IR models + CLI
 
 ✅ Cisco ASA importer/exporter
