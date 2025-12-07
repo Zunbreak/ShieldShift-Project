@@ -175,5 +175,5 @@ For commercial licensing, enterprise integration, or job inquiries, please conta
 
 💼 **LinkedIn:** [Zebastian Larsson](https://www.linkedin.com/in/zebastian-larsson-b334861b2/)
 
-**Author:** Zebastian Larsson [@Zunbreak](https://github.com/Zunbreak)
+🧑‍💻 **Author:** Zebastian Larsson [@Zunbreak](https://github.com/Zunbreak)
 
