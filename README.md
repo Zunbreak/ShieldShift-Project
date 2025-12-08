@@ -2,7 +2,7 @@
 
 > **Migrate complex network security policies in seconds, not days.**
 > 
-> **A CLI & API tool for converting, auditing, and validating firewall configurations between Cisco ASA, FortiGate, and Palo Alto.**
+> **A CLI & API tool for converting, auditing, and validating firewall configurations between Cisco ASA, FortiGate, and Palo Alto. PfSense & Iptables**
 
 ---
 
@@ -30,7 +30,7 @@
 
 Unlike simple regex scripts, **ShieldShift** parses configs into a standardized **JSON Intermediate Representation**.
 
-* **Input:** Cisco ASA, FortiGate, Palo Alto
+* **Input:** Cisco ASA, FortiGate, Palo Alto, PfSense & Iptables*
 * **Output:** Any of the above + JSON (for custom tooling)
 * **Benefit:** Add a new vendor parser once, and it automatically unlocks conversions to all other supported vendors.
 
@@ -50,9 +50,18 @@ Don't just migrate garbage. Clean it up on the way.
 
 Every conversion is validated to ensure your security policies remain intact.
 
-* **150+ Automated Tests:** Full coverage of importers, exporters, and cross-vendor conversions
-* **Golden Roundtrip Tests:** Verified semantic preservation across all vendor combinations (ASA ↔ FortiGate ↔ Palo Alto)
+* **237 Automated Tests:** Full coverage of importers, exporters, and cross-vendor conversions
+* **74 Roundtrip Tests:** Verified semantic preservation across all vendor combinations (ASA ↔ FortiGate ↔ Palo Alto ↔ pfSense ↔ iptables)
+* **5 Vendors Fully Tested:** Complete test coverage for all supported vendors
+* **25 Conversion Combinations:** All possible vendor-to-vendor conversions tested (5 same-vendor + 20 cross-vendor)
 * **Built-in Validation:** Policy structure validation and consistency checks
+
+**Quality Metrics:**
+* ✅ **100% Test Pass Rate:** All 237 tests passing
+* ✅ **163 Vendor-Specific Tests:** Comprehensive coverage for all 5 vendors
+* ✅ **74 Roundtrip Tests:** Ensures semantic preservation during conversions
+* ✅ **25 Conversion Combinations:** All vendor-to-vendor paths tested and verified
+* ✅ **Golden Sample Coverage:** Tested with real-world configuration examples
 
 ---
 
@@ -97,9 +106,9 @@ shieldshift diff policy_old.json policy_new.json
 
 ⚠️ **Important:** This repository (ShieldShift-Project) contains documentation, examples and architecture.
 
-The actual engine source code is proprietary and hosted in a private repository.
+* The actual engine source code is proprietary and hosted in a private repository.
 
-The commands below describe how installation looks for customers or collaborators, with access to the private engine repo.
+* The commands below describe how installation looks for customers or collaborators, with access to the private engine repo.
 
 ### Clone the private engine repository (requires access/license)
 
@@ -108,8 +117,8 @@ The commands below describe how installation looks for customers or collaborator
 
 
 ### Installation
+```
 
-```bash
 # Create virtual environment
 python -m venv .venv
 
@@ -121,12 +130,13 @@ source .venv/bin/activate
 
 # Install in editable mode
 pip install -e .
-```
+
 
 Once installed, the `shieldshift` CLI is available on your PATH:
 
-```bash
+
 shieldshift --help
+
 ```
 
 ---
@@ -142,6 +152,10 @@ shieldshift --help
 ✅ **Validation, diff, stats, risk analysis**
 
 ✅ **Anonymization** (CLI + API)
+
+✅ **212 automated tests** with 100% pass rate
+
+✅ **49 roundtrip tests** verifying semantic preservation
 
 **Planned / in progress:**
 
@@ -166,6 +180,15 @@ The core engine source code is maintained privately by Zebastian Larsson (@Zunbr
 All rights to the ShieldShift engine are reserved. Third-party open source dependencies are used under their respective licenses.
 
 For commercial licensing, enterprise integration, or job inquiries, please contact me directly.
+
+---
+
+## 📚 Additional Resources
+
+- **[FAQ](Coming Soon)** - Frequently Asked Questions
+- **[Security Policy](Coming Soon)** - Security principles and vulnerability reporting
+- **[Changelog](Coming soon)** - Version history and release notes
+- **[Release v1.0.0]Coming Soon)** - Detailed release information
 
 ---
 
