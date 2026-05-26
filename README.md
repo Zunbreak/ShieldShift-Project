@@ -1,0 +1,3 @@
+# ShieldShift (placeholder)
+
+This repository is reserved for future documentation...
